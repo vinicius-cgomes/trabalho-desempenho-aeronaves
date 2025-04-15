@@ -57,7 +57,7 @@ plot(V, T_available * ones(size(V)), 'r-', 'LineWidth', 2);
 xline(V_stall, 'k--', 'V_{stall}');
 xline(Vmo, 'g--', 'V_{mo}');
 xlabel('Velocidade (m/s)');
-ylabel('Tração/Arrasto (N)');
+ylabel('Tração (N)');
 legend('Tração Requerida (Arrasto)', 'Tração Disponível', ...
        'V_{stall}', 'V_{mo}');
 title('Tração vs. Velocidade em 10.000 ft');
