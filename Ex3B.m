@@ -52,9 +52,9 @@ for i = 1:length(altitudes)
     
     % Plot das curvas
     plot(V, D, 'Color', colors(i), 'LineWidth', 2, ...
-         'DisplayName', ['Tração Requerida em ' num2str(altitudes(i)/1000) ' km']);
+         'DisplayName', ['Tração Requerida em ' num2str(altitudes(i)/1000) 'm']);
     plot(V, T_available * ones(size(V)), '--', 'Color', colors(i), 'LineWidth', 2, ...
-         'DisplayName', ['Tração Disponível em ' num2str(altitudes(i)/1000) ' km']);
+         'DisplayName', ['Tração Disponível em ' num2str(altitudes(i)/1000) 'm']);
     
     % Velocidade de estol
     V_stall = sqrt(2 * W / (rho(i) * S * CL_max)); %slide nº 16 (Aula: Envelopes de Voo)
@@ -67,7 +67,7 @@ xline(Vmo, 'k--', 'LineWidth', 1.5, 'DisplayName', 'V_{mo}');
 
 % Ajustes do gráfico
 xlabel('Velocidade (m/s)');
-ylabel('Tração/Arrasto (N)');
+ylabel('Tração (N)');
 title('Tração vs. Velocidade em Diferentes Altitudes');
 legend('Location', 'northeast');
 grid on;
