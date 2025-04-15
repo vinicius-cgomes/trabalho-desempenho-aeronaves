@@ -13,8 +13,8 @@ g = 9.81; %gravidade (m/s^2)
 W = m * g;
 
 % Densidade do ar para as 3 altitudes (kg/m³)
-altitude = [0, 3048, 13716];% Nível do mar = 0; 10.000 ft = 3.048m e 45000ft = 13716m.
-rho = 1.225 * exp(-altitude / 8500);
+altitudes = [0, 3048, 13716];% Nível do mar = 0; 10.000 ft = 3.048m e 45000ft = 13716m.
+rho = 1.225 * exp(-altitudes / 8500);
 %confirmar rho, dito que achei a fórmula por pesquisa na internet kkkkkkkkk
 
 % Arrasto parasita
