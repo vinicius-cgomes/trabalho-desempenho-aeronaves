@@ -41,7 +41,7 @@ CD = CD0 + k * CL.^2; %slide nº 6 (Aula: Envelopes de Voo)
 D = 0.5 * rho * V.^2 * S .* CD; %slide nº 6 (Aula: Envelopes de Voo)
 
 % Tração disponível (manete 100%)
-T_available = 2 * ( (rho/1.225)^0.6 * 55600 ); %slide nº 11 (Aula: Envelopes de Voo)
+T_available = ( (rho/1.225)^0.6 * 55600 ); %slide nº 11 (Aula: Envelopes de Voo)
 
 % Velocidade de estol
 V_stall = sqrt(2 * W / (rho * S * CL_max)); %slide nº 16 (Aula: Envelopes de Voo)
