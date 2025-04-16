@@ -50,15 +50,16 @@ for i = 1:length(altitudes)
     % Tração requerida (Arrasto Parabólico)
     D = 0.5 * rho(i) * V.^2 * S .* CD; %slide nº 6 (Aula: Envelopes de Voo)
     
-    % Plot das curvas
+    % Plot das curvas de tração
     plot(V, D, 'Color', colors(i), 'LineWidth', 2, ...
-         'DisplayName', ['Tração Requerida em ' num2str(altitudes(i)/1000) 'm']);
+         'DisplayName', ['Tração Req. @ ' num2str(altitudes(i)/1000) ' km']);
     plot(V, T_available * ones(size(V)), '--', 'Color', colors(i), 'LineWidth', 2, ...
-         'DisplayName', ['Tração Disponível em ' num2str(altitudes(i)/1000) 'm']);
+         'DisplayName', ['Tração Disp. @ ' num2str(altitudes(i)/1000) ' km']);
     
-    % Velocidade de estol
-    V_stall = sqrt(2 * W / (rho(i) * S * CL_max)); %slide nº 16 (Aula: Envelopes de Voo)
-    xline(V_stall, '--', 'Color', colors(i), 'HandleVisibility', 'off');
+    % Linha de estol com legenda
+    V_stall = sqrt(2 * W / (rho(i) * S * CL_max));
+    xline(V_stall, '--', 'Color', colors(i), ...
+        'DisplayName', ['Estol (' num2str(altitudes(i)/1000) ' km)']);
 end
 
 % Limite de velocidade máxima (Vmo)
