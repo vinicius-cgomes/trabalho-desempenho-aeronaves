@@ -26,7 +26,7 @@ k = 0.05; %Para flapes Recolhidos: CD = CD0 + k(CL)^2 (p nossa aeronave: CD = 0.
 %slide nº 6 (Aula: Envelopes de Voo)
 
 % Velocidades de teste (m/s)
-V = 50:1:400; % Ampliada para cobrir FL450
+V = 40:1:400; % Ampliada para cobrir FL450
 
 %% Plot
 % Cores para cada altitude
@@ -52,19 +52,19 @@ for i = 1:length(altitudes)
     
     % Plot das curvas de tração
     plot(V, D, 'Color', colors(i), 'LineWidth', 2, ...
-         'DisplayName', ['Tração Req. @ ' num2str(altitudes(i)/1000) ' km']);
+         'DisplayName', ['Tração Req. @ ' num2str(altitudes(i)/1000) ' m']);
     plot(V, T_available * ones(size(V)), '--', 'Color', colors(i), 'LineWidth', 2, ...
-         'DisplayName', ['Tração Disp. @ ' num2str(altitudes(i)/1000) ' km']);
+         'DisplayName', ['Tração Disp. @ ' num2str(altitudes(i)/1000) ' m']);
     
     % Linha de estol com legenda
     V_stall = sqrt(2 * W / (rho(i) * S * CL_max));
     xline(V_stall, '--', 'Color', colors(i), ...
-        'DisplayName', ['Estol (' num2str(altitudes(i)/1000) ' km)']);
+        'DisplayName', ['Estol (' num2str(altitudes(i)/1000) ' m)']);
 end
 
 % Limite de velocidade máxima (Vmo)
-Vmo = 890 / 3.6; % 890 km/h -> m/s
-xline(Vmo, 'k--', 'LineWidth', 1.5, 'DisplayName', 'V_{mo}');
+%Vmo = 890 / 3.6; % 890 km/h -> m/s
+%xline(Vmo, 'k--', 'LineWidth', 1.5, 'DisplayName', 'V_{mo}');
 
 % Ajustes do gráfico
 xlabel('Velocidade (m/s)');
