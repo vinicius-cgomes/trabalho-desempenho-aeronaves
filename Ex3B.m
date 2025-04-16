@@ -59,7 +59,7 @@ for i = 1:length(altitudes)
     % Linha de estol com legenda
     V_stall = sqrt(2 * W / (rho(i) * S * CL_max));
     xline(V_stall, '--', 'Color', colors(i), ...
-        'DisplayName', ['Estol (' num2str(altitudes(i)/1000) ' m)']);
+        'DisplayName', ['Vel. Estol (' num2str(altitudes(i)/1000) ' m)']);
 end
 
 % Limite de velocidade máxima (Vmo)
