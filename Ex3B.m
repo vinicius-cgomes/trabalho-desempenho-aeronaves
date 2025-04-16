@@ -37,7 +37,7 @@ figure; hold on;
 %% Loop para cada altitude
 for i = 1:length(altitudes)
     % Tração disponível (manete 100%)
-    T_available = 2 * ( (rho(i)/1.225).^(0.6) * 55600 ); %slide nº 11 (Aula: Envelopes de Voo)
+    T_available = 2 * ( (rho(i)/1.225).^(0.6) * 27800 ); %slide nº 11 (Aula: Envelopes de Voo)
     
     % Tração requerida (Arrasto):
 
