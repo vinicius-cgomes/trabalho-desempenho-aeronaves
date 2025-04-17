@@ -1,16 +1,11 @@
 **Resumo de arquivos da pasta**
 
-**atmosferaISA(H)** —> retorna rho, T e p com base na altitude.
-
-**comparacao_ISA_real.m** —> gera uma tabela da atmosfera padrão ISA e calcula a altitude de densidade com base em temperaturas reais para comparação.
-
-**voo_planado_A.m**  —> simula o voo planado sem tração, calculando a trajetória, altitude vs distância, velocidade vs tempo, alcance e autonomia.
-
-**voo_planado_B.m**  —> simula o voo planado variando o coeficiente de sustentação (CL), calculando o alcance e a autonomia da aeronave para diferentes valores de CL
-
-**evento_altura_zero.m**   —> define um evento no código que interrompe a simulação do voo planado quando a altura da aeronava atinge zero (usado para executar a parte B)
-
-**voo_planado_C.m**  —>  simula o voo planado variando CL em atmosfera ISA + 20°C, analisando os efeitos sobre alcance e autonomia.
+`atmosferaISA(H)` —> retorna rho, T e p com base na altitude.  
+`comparacao_ISA_real.m` —> gera uma tabela da atmosfera padrão ISA e calcula a altitude de densidade com base em temperaturas reais para comparação.  
+`voo_planado_A.m`  —> simula o voo planado sem tração, calculando a trajetória, altitude vs distância, velocidade vs tempo, alcance e autonomia.  
+`voo_planado_B.m`  —> simula o voo planado variando o coeficiente de sustentação (CL), calculando o alcance e a autonomia da aeronave para diferentes valores de CL  
+`evento_altura_zero.m`   —> define um evento no código que interrompe a simulação do voo planado quando a altura da aeronava atinge zero (usado para executar a parte B)  
+`voo_planado_C.m`  —>  simula o voo planado variando CL em atmosfera ISA + 20°C, analisando os efeitos sobre alcance e autonomia.  
 
 ---
 
@@ -79,5 +74,15 @@ Simular o voo planado de uma aeronave a partir de 10.000 m de altitude, utilizan
 ✅ Tabela com os resultados de CL, E, V_inicial, γ_inicial, alcance e autonomia
 
 
+---
 
+### Análises para colocar no relatório
 
+**Exercício 1:**  
+- Quais informações são conhecidas pelo piloto durante a operação da aeronave?
+- Qual o objetivo de calcular a altitude-densidade?
+
+**Exercício 2:**  
+- A: Quando as velocidades são iguais?
+- B: Qual a condição de máxima autonomia? Qual a condição de máximo alcance? Qual a relação entre os gráficos?
+- C: Mostrar como os parâmetros se alteram se a aeronava opera em atmosfera ISA+20
