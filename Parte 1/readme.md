@@ -11,6 +11,7 @@
 **evento_altura_zero.m**   —> define um evento no código que interrompe a simulação do voo planado quando a altura da aeronava atinge zero (usado para executar a parte B)
 
 **voo_planado_C.m**  —>  simula o voo planado variando CL em atmosfera ISA + 20°C, analisando os efeitos sobre alcance e autonomia.
+
 ---
 
 ### Exercício 1 – Atmosfera ISA e Altitude de Densidade
