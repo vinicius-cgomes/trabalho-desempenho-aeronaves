@@ -6,6 +6,10 @@
 
 **voo_planado_A.m**  —> simula o voo planado sem tração, calculando a trajetória, altitude vs distância, velocidade vs tempo, alcance e autonomia.
 
+**voo_planado_B.m**  —> simula o voo planado variando o coeficiente de sustentação (CL), calculando o alcance e a autonomia da aeronave para diferentes valores de CL
+
+**evento_altura_zero.m**   —> define um evento no código que interrompe a simulação do voo planado quando a altura da aeronava atinge zero (usado para executar a parte B)
+
 ---
 
 ### Exercício 1 – Atmosfera ISA e Altitude de Densidade
@@ -44,4 +48,17 @@ Simular o voo planado de uma aeronave a partir de 10.000 m de altitude, utilizan
 
 **Pendente:**
 - 🟡 Verificar/conferir o gráfico de velocidades (ta meio estranho)
+
+---
+
+# Parte B – Simulação de Voo Planado para Diferentes Valores de CL
+
+### Já Feito:
+
+✅ Simulação de voo planado para diferentes valores de **CL** (0 a 2.5)  
+✅ Cálculo do **alcance** e da **autonomia** para cada **CL**  
+✅ Cálculo da **eficiência aerodinâmica (E)**  
+✅ Geração de gráficos de **alcance**, **autonomia**, **γ_inicial**, **H_dot_inicial** e **V_inicial** vs **CL**  
+✅ Tabela com os resultados de **CL**, **E**, **V_inicial**, **γ_inicial**, **alcance** e **autonomia**
+
 
