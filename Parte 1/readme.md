@@ -2,9 +2,9 @@
 
 **atmosferaISA(H)** —> retorna rho, T e p com base na altitude.
 
-**comparacao_ISA_real.m** —> Gera uma tabela da atmosfera padrão ISA e calcula a altitude de densidade com base em temperaturas reais para comparação.
+**comparacao_ISA_real.m** —> gera uma tabela da atmosfera padrão ISA e calcula a altitude de densidade com base em temperaturas reais para comparação.
 
-
+**voo_planado_A.m**  —> simula o voo planado sem tração, calculando a trajetória, altitude vs distância, velocidade vs tempo, alcance e autonomia.
 
 ---
 
