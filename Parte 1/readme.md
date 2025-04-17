@@ -10,6 +10,7 @@
 
 **evento_altura_zero.m**   —> define um evento no código que interrompe a simulação do voo planado quando a altura da aeronava atinge zero (usado para executar a parte B)
 
+**voo_planado_C.m**  —>  simula o voo planado variando CL em atmosfera ISA + 20°C, analisando os efeitos sobre alcance e autonomia.
 ---
 
 ### Exercício 1 – Atmosfera ISA e Altitude de Densidade
@@ -71,9 +72,11 @@ Simular o voo planado de uma aeronave a partir de 10.000 m de altitude, utilizan
 
 **Já feito:**
 
-✅ Simulação de voo planado para diferentes valores de CL (0 a 2.5) considerando a atmosfera ISA + 20°C
-✅ Cálculo de alcance e autonomia para cada valor de CL
-✅ Geração de gráficos de alcance, autonomia, gamma inicial e velocidade inicial em função de CL
-✅ Tabela com os resultados de **CL**, **E**, **V_inicial**, **γ_inicial**, **alcance** e **autonomia**
+✅ Simulação de voo planado para diferentes valores de CL (0 a 2.5) considerando a atmosfera ISA + 20°C  
+✅ Cálculo de alcance e autonomia para cada valor de CL  
+✅ Geração de gráficos de alcance, autonomia, gamma inicial e velocidade inicial em função de CL  
+✅ Tabela com os resultados de CL, E, V_inicial, γ_inicial, alcance e autonomia
+
+
 
 
