@@ -26,3 +26,22 @@ Criar a função `atmosferaISA(H)` que retorna densidade, temperatura e pressão
 Durante a operação da aeronave, o piloto conhece a **altitude-pressão** (via instrumentos) e a **temperatura externa** (via sensores). O cálculo da **altitude de densidade** é fundamental para avaliar o desempenho real da aeronave, pois afeta diretamente a sustentação, empuxo e eficiência do voo.
 
 --- 
+
+### Exercício 2 – Simulação de Voo Planado
+
+**O que o enunciado pede:**  
+Simular o voo planado de uma aeronave a partir de 10.000 m de altitude, utilizando as equações do movimento longitudinal sem tração e considerando atmosfera padrão ISA. O exercício envolve cálculo de velocidades, trajetória, alcance, autonomia e análise para diferentes valores de coeficiente de sustentação (CL), além de variação da atmosfera (ISA + 20°C).
+
+---
+
+### Parte A – Simulação com CL ideal (`CL = sqrt(CD0/k)`)
+
+**Já feito:**
+- ✅ Resolução do sistema com `ode45` para a condição de planeio ideal  
+- ✅ Gráfico da altura da aeronave vs. distância horizontal (H vs. x)  
+- ✅ Gráfico das velocidades verdadeira (TAS) e indicada (IAS), em função do tempo  
+- ✅ Cálculo do alcance [km] e autonomia [min] com interpolação (`interp1`)
+
+**Pendente:**
+- 🟡 Verificar/conferir o gráfico de velocidades (ta meio estranho)
+
