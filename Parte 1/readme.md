@@ -58,6 +58,7 @@ Simular o voo planado de uma aeronave a partir de 10.000 m de altitude, utilizan
 ### Parte B – Simulação de Voo Planado para Diferentes Valores de CL
 
 **Já feito:**
+
 ✅ Simulação de voo planado para diferentes valores de **CL** (0 a 2.5)  
 ✅ Cálculo do **alcance** e da **autonomia** para cada **CL**  
 ✅ Cálculo da **eficiência aerodinâmica (E)**  
