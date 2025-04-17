@@ -65,4 +65,15 @@ Simular o voo planado de uma aeronave a partir de 10.000 m de altitude, utilizan
 ✅ Geração de gráficos de **alcance**, **autonomia**, **γ_inicial**, **H_dot_inicial** e **V_inicial** vs **CL**  
 ✅ Tabela com os resultados de **CL**, **E**, **V_inicial**, **γ_inicial**, **alcance** e **autonomia**
 
+---
+
+### Parte C – Simulação de Voo Planado para Atmosfera ISA + 20°C
+
+**Já feito:**
+
+✅ Simulação de voo planado para diferentes valores de CL (0 a 2.5) considerando a atmosfera ISA + 20°C
+✅ Cálculo de alcance e autonomia para cada valor de CL
+✅ Geração de gráficos de alcance, autonomia, gamma inicial e velocidade inicial em função de CL
+✅ Tabela com os resultados de **CL**, **E**, **V_inicial**, **γ_inicial**, **alcance** e **autonomia**
+
 
