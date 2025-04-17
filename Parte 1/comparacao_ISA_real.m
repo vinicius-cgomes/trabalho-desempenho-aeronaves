@@ -41,5 +41,5 @@ end
 figure;
 hold on; grid on;
 plot(T_real_C, H_densidade_vec)
-xlabel('Temperatura (K)'); 
+xlabel('Temperatura (°C)'); 
 ylabel('Altitude de densidade (m)');
