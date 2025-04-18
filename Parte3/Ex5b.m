@@ -1,6 +1,6 @@
-%Exercicio 6
+%Exercicio 5-b
 
-%Parte 1: Requisito Operacional (AEO - Todos Motores Operando)
+%Parte 2: Requisito Certificação (OEI - One Engine Inoperative)
 
 gama = deg2rad(5.5); % especificado
 
