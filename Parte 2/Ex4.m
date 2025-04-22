@@ -7,7 +7,7 @@ function Ex4()
     m_total = 33100;             % Massa total [kg]
     W_total = m_total * 9.81;    % Peso total [N]
 
-    %% Características Aerodinâmicas
+    %% Características Aerodinâmicas p/ Flaps Recolhidos
     S = 88;                      % Área da asa [m²]
     CL_max = 2.0;                % Coef. de sustentação máximo
     CD0 = 0.015;                 % Coef. de arrasto parasita
