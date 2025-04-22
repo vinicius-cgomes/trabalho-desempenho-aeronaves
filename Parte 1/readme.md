@@ -2,6 +2,7 @@
 
 `atmosferaISA(H)` —> retorna rho, T e p com base na altitude.  
 `comparacao_ISA_real.m` —> gera uma tabela da atmosfera padrão ISA e calcula a altitude de densidade com base em temperaturas reais para comparação.  
+`comparacao_ISA_real_v02.m` —> versão 02 com as linhas de altitude de pressão no gráfico  
 `voo_planado_A.m`  —> simula o voo planado sem tração, calculando a trajetória, altitude vs distância, velocidade vs tempo, alcance e autonomia.  
 `voo_planado_B.m`  —> simula o voo planado variando o coeficiente de sustentação (CL), calculando o alcance e a autonomia da aeronave para diferentes valores de CL  
 `evento_altura_zero.m`   —> define um evento no código que interrompe a simulação do voo planado quando a altura da aeronava atinge zero (usado para executar a parte B)  
@@ -20,10 +21,7 @@ Criar a função `atmosferaISA(H)` que retorna densidade, temperatura e pressão
 ✅ Tabela gerada com valores de temperatura, pressão e densidade ISA de 0 a 20.000 m  
 ✅ Cálculo da altitude de densidade com base na temperatura real  
 ✅ Gráfico gerado relacionando **temperatura real** com **altitude de densidade**
-
-**O que falta:**  
-
-🟡 Adicionar a **altitude de pressão** como referência no gráfico (ex: marcadores ou linhas horizontais para comparar com a altitude de densidade)
+✅ Adicionar a **altitude de pressão** como referência no gráfico
 
 **O que eu entendi:**  
 Durante a operação da aeronave, o piloto conhece a **altitude-pressão** (via instrumentos) e a **temperatura externa** (via sensores). O cálculo da **altitude de densidade** é fundamental para avaliar o desempenho real da aeronave, pois afeta diretamente a sustentação, empuxo e eficiência do voo.
