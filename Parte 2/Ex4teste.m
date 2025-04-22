@@ -2,7 +2,7 @@
 %Parte 2 - Análise de Envelope em Voo de cruzeiro
 %Exercício 4: Envelope em Voo
 
-function Ex4()
+function Ex4teste()
     %% Dados Básicos
     m_total = 33100;             % Massa total [kg]
     W_total = m_total * 9.81;    % Peso total [N]
@@ -18,8 +18,8 @@ function Ex4()
     n_engines = 2;               % Número de motores
     delta_T = 1.0;               % Fator de manete (100%)
 
-    n_rho = 0.7;                 % Parâmetro empírico para a modelagem da diminuição da tração máxima (F_max) com a altitude em modelos simplificados de envelope de voo.
-    %depende do motor utilizado: Pistão 0.7/0.8 ou Turboélice simples 0.8/0.9 ou Turbojato	1.0
+    n_rho = 0.6;                 % (dado na eq. de tração por motor) Parâmetro empírico para a modelagem da diminuição da tração máxima (F_max) com a altitude em modelos simplificados de envelope de voo.
+    %depende do motor utilizado, ex: Pistão 0.7/0.8 ou Turboélice simples 0.8/0.9 ou Turbojato	1.0
 
     F_max = T0_single * n_engines * delta_T;  % Tração máxima total ao nível do mar [N]
 
@@ -94,6 +94,7 @@ function plot_envelope_voo_cruzeiro(m, k, S, Cd0, F_max, rho0, n_rho, CL_max, Vm
     % Impressão dos resultados finais
     fprintf('Teto absoluto de voo: %.2f metros\n', H_vec(end));
     fprintf('Velocidade máxima alcançável: %.2f m/s\n', max(V_max_vec));
+    fprintf('Densidade no teto (rho_teto): %.6f kg/m³\n', rho_teto);
 end
 
 function [V_min, V_max] = V_min_max_cruzeiro(m, H, S, Cd0, k, F_max, rho0, n_rho)
