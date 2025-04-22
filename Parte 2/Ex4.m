@@ -13,7 +13,10 @@ function Ex4()
     T0_single = 27800;           % Tração por motor [N]
     n_engines = 2;               % Número de motores
     delta_T = 1.0;               % Fator de manete (100%)
-    n_rho = 0.8;                 % Expoente de redução de tração
+    
+    n_rho = 0.8;                 % Parâmetro empírico para a modelagem da diminuição da tração máxima (F_max) com a altitude em modelos simplificados de envelope de voo.
+    %depende do motor utilizado: Pistão 0.7/0.8 ou Turboélice simples 0.8/0.9 ou Turbojato	1.0
+    
     F_max = T0_single * n_engines * delta_T;  % Tração máxima total ao nível do mar [N]
 
     %% Parâmetros
