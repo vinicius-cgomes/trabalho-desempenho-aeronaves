@@ -1,6 +1,7 @@
 %Trabalho Final - Desempenho
 %Parte 2 - Envelope de voo em cruzeiro
 %Exercício 4: Envelope de Voo
+%Slides 1 a 19 - aula Envelopes de Voo: Cruzeiro, Subida e Descida
 
 function Ex4()
     %% Dados Básicos
