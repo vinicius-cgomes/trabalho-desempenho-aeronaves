@@ -43,10 +43,7 @@ Simular o voo planado de uma aeronave a partir de 10.000 m de altitude, utilizan
 ✅ Gráfico da altura da aeronave vs. distância horizontal (H vs. x)  
 ✅ Gráfico das velocidades verdadeira (TAS) e indicada (IAS), em função do tempo  
 ✅ Cálculo do alcance [km] e autonomia [min] com interpolação (`interp1`)
-
-**Pendente:**
-
-🟡 Verificar/conferir o gráfico de velocidades (ta meio estranho)
+✅ Verificar/conferir o gráfico de velocidades 
 
 ---
 
