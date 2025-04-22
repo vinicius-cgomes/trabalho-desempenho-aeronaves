@@ -48,7 +48,9 @@ for j = 1:1:2
 
     x0 = [400, 440, 40000, 33000];
 
-    sol = fsolve(func, x0);
+    opts = optimset('Diagnostics','off', 'Display','off');
+
+    sol = fsolve(func, x0, opts);
 
     Resultados(j, :) = sol;
 end

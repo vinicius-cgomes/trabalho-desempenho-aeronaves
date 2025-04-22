@@ -1,8 +1,9 @@
-%Exercicio 5-b
+%Exercicio 5-c
 
-%Parte 2: Requisito Certificação (OEI - One Engine Inoperative)
+%Parte 3: Comdição mais restritiva: OEI - One Engine Inoperative
 
-gama = deg2rad(2.4); % especificado
+gradiente = 2.4/100; % Gradiente de subida 2.4% (altura ganha por distância horizontal percorrida)
+gama = atan(gradiente); % ângulo de subida arco tangente do gradiente
 
 g = 9.80665; %m/s^2 aceleração da gravidade
 
@@ -26,20 +27,22 @@ rhozero = 1.225; %Kg/m^3 densidade no nivel do mar
 
 pzero = rhozero*R*Tzero; %pressao SL
 
-rho = [pzero/(R*(Tzero-10)) pzero/(R*(Tzero+30))]; % rho nas temperaturas ISA-10 e ISA30 SL
+Tlinha = Tzero-10:Tzero+30; % Vetor com temperaturas entre ISA-10 e ISA+30 SL
+
+rho = pzero./(R.*Tlinha); % rho para as temperaturas entre ISA-10 e ISA30 SL
 
 %--------Fim cálculo rho------------
 
 T = (deltaT .* ((rho/1.225).^0.6).*55600)/2; % especificado - Potência total pela metade por ter apenas um motor operando
 
-Resultados = zeros(2, 4); % [Vestol, Vlof, D, m]
+Resultados = zeros(length(rho), 4); % [Vestol, Vlof, D, m]
 
-for j = 1:1:2
+for j = 1:1:length(rho)
 
     func = @(x)[
         x(1) - sqrt((2*x(4)*g*cos(gama))/(rho(j)*S*Clmax)); % Slide n 29 (Aula: Envelopes de Voo) x(1) = Vestol
     
-        x(2) - (1.1*x(1)); % especificado x(2) = Vlof
+        x(2) - (1.2*x(1)); % especificado x(2) = Vlof
     
         x(3) - ((1/2) * rho(j) * (x(2)^2) * S * Cd); %calculo de D -> x(3) = D
     
@@ -48,13 +51,16 @@ for j = 1:1:2
 
     x0 = [400, 440, 40000, 33000];
 
-    sol = fsolve(func, x0);
+    opts = optimset('Diagnostics','off', 'Display','off');
+
+    sol = fsolve(func, x0, opts);
 
     Resultados(j, :) = sol;
 end
 
-
-fprintf('\nResultados (ISA -10 e ISA +30):\n');
-fprintf('%12s %12s %12s %12s\n', 'Vestol (m/s)', 'Vlof (m/s)', 'D (N)', 'm (kg)');
-fprintf('%12.2f %12.2f %12.2f %12.2f      <- ISA-10\n', Resultados(1,1), Resultados(1,2), Resultados(1,3), Resultados(1,4));
-fprintf('%12.2f %12.2f %12.2f %12.2f      <- ISA+30\n', Resultados(2,1), Resultados(2,2), Resultados(2,3), Resultados(2,4));
+figure; hold on;
+plot(Tlinha-288.15, Resultados(:,4)', "LineWidth",1, "Color","r");
+ylabel("MTOW");
+xlabel("Temperatura ISA");
+title("");
+subtitle("");
