@@ -5,7 +5,7 @@
 clear; clc; close all
 
 % Parâmetros da aeronave e constantes físicas
-g = 9.8;                    
+g = 9.80665;                   
 m = 33100;                  
 S = 88;                     
 CD0 = 0.015;                
