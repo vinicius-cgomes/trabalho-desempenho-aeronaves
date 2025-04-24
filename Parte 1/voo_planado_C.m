@@ -1,5 +1,5 @@
 % =====================================
-% Exercício 2 - Parte B - Isa S. 23/04
+% Exercício 2 - Parte C - Isa S. 23/04
 % =====================================
 clc; clear; close all;
 
