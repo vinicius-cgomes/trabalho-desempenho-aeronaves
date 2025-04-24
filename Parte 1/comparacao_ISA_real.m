@@ -37,11 +37,19 @@ end
 T_ISA_C = T_ISA - 273.15;
 Altitude_densidade_m = diag(H_densidade_vec);  
 
-%================= Tabela =================
-Tabela1 = table(Hvec', Tvec', Tvec_C', pvec', rhovec', ...
-    'VariableNames', {'Altitude_m', 'Temperatura_K', 'Temperatura_C', 'Pressao_Pa', 'Densidade_kg_m3'});
+% %================= Tabela =================
+% Tabela1 = table(Hvec', Tvec', Tvec_C', pvec', rhovec', ...
+%     'VariableNames', {'Altitude_m', 'Temperatura_K', 'Temperatura_C', 'Pressao_Pa', 'Densidade_kg_m3'});
+% disp('-------------------- Tabela --------------------');
+% disp(Tabela1);
+
+%================= Tabela Modificada =================
+Tabela2 = table(Hvec', Tvec_C', T_ISA_C', pvec', rhovec', Altitude_densidade_m, ...
+    'VariableNames', {'Altitude_pressao_m', 'Temperatura_real_C', 'Temperatura_ISA_C', ...
+                      'Pressao_Pa', 'Densidade_kg_m3', 'Altitude_densidade_m'});
 disp('-------------------- Tabela --------------------');
-disp(Tabela1);
+disp(Tabela2);
+
 
 %================= Gráfico - Altitude de densidade em metros =================
 nH = length(Hvec);
@@ -84,3 +92,7 @@ ax = gca;
 ax.YAxis.Exponent = 0; 
 
 hold off;
+
+
+% Salvar o gráfico em um diretório específico sem mudar o diretório de trabalho
+saveas(gcf, 'C:\Users\Isabela Soares\Desktop\Desempenho PEE\Projeto_Final');
