@@ -17,8 +17,6 @@
 **Anotações**
 ---
 
-🟡 Conferir Exercício 2 - Parte C (rho em ISA+20°C)
-
 ### Exercício 1 – Atmosfera ISA e Altitude de Densidade
 
 **O que o enunciado pede:**  
