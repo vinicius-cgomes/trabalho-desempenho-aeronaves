@@ -38,12 +38,10 @@ T_ISA_C = T_ISA - 273.15;
 Altitude_densidade_m = diag(H_densidade_vec);  
 
 %================= Tabela =================
-Tabela1 = table(Hvec', Tvec_C', pvec', rhovec', Altitude_densidade_m, ...
-    'VariableNames', {'Altitude_pressao_m', 'Temperatura_C', 'Temperatura_ISA_C', ...
-                      'Pressao_Pa', 'Densidade_kg_m3', 'Altitude_densidade_m'});
+Tabela1 = table(Hvec', Tvec_C', pvec', rhovec', ...
+    'VariableNames', {'Altitude_m',  'Temperatura_C', 'Pressao_Pa', 'Densidade_kg_m3'});
 disp('-------------------- Tabela --------------------');
 disp(Tabela1);
-
 
 %================= Gráfico - Altitude de densidade em metros =================
 nH = length(Hvec);
