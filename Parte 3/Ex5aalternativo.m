@@ -12,10 +12,6 @@ Clmax = 2.5; % especificado
 
 Clzero = 0.3; % especificado
 
-Cl = Clmax/(1.1^2); % explicação no relatório
-
-Cd = 0.03 + 0.07 * (Cl ^ 2); % valor para Cd de acordo com a polar de arrasto
-
 deltaT = 1; % especificado (100%)
 
 %------Cálculo do rho-------------
@@ -29,7 +25,7 @@ rho = [pzero/(R*(Tzero-10)) pzero/(R*(Tzero+30))]; % rho nas condições de temp
 
 T = deltaT .* ((rho/1.225).^0.6).*55600; % especificado
 
-Resultados = zeros(2, 4); % [Vestol, Vlof, D, m]
+Resultados = zeros(2, 6); % [Vestol, Vlof, D, m]
 
 for j = 1:1:2
 
@@ -38,12 +34,16 @@ for j = 1:1:2
     
         x(2) - (1.1*x(1)); % especificado x(2) = Vlof
     
-        x(3) - ((1/2) * rho(j) * (x(2)^2) * S * Cd); %calculo de D -> x(3) = D
+        x(3) - ((1/2) * rho(j) * (x(2)^2) * S * x(6)); %calculo de D -> x(3) = D
     
-        x(4) - ((T(j)-x(3))/(g*sin(gama))); %subida permanente -> x(4) = m    
+        x(4) - ((T(j)-x(3))/(g*sin(gama))); %subida permanente -> x(4) = m
+
+        x(5) - (2*x(4)*g*cos(gama))/(rho(j)*S*x(2)^2);
+
+        x(6) - 0.03 - 0.07*x(5)^2;
     ];
 
-    x0 = [400, 440, 40000, 33000];
+    x0 = [400, 440, 40000, 33000, 2.5, 2.0];
 
     opts = optimset('Diagnostics','off', 'Display','off');
 

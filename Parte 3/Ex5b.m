@@ -21,13 +21,9 @@ deltaT = 1; % especificado (100%)
 
 %------Cálculo do rho-------------
 
-R = 287; % J/Kg K SL
-Tzero = 288.15; % K (15˚C) SL
-rhozero = 1.225; %Kg/m^3 densidade no nivel do mar
+[rhozero, Tzero, pzero] = atmosferaISA(0); % utilização da função desenvolvida na primeira questão em SL
 
-pzero = rhozero*R*Tzero; %pressao SL
-
-rho = [pzero/(R*(Tzero-10)) pzero/(R*(Tzero+30))]; % rho nas temperaturas ISA-10 e ISA30 SL
+rho = [pzero/(R*(Tzero-10)) pzero/(R*(Tzero+30))]; % rho nas condições de temperatura ISA-10 e ISA30 SL
 
 %--------Fim cálculo rho------------
 

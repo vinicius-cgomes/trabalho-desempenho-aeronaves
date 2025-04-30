@@ -1,6 +1,6 @@
 %Exercicio 5-c
 
-%Parte 3: Comdição mais restritiva: OEI - One Engine Inoperative
+%Parte 3: Condição mais restritiva: OEI - One Engine Inoperative
 
 gradiente = 2.4/100; % Gradiente de subida 2.4% (altura ganha por distância horizontal percorrida)
 gama = atan(gradiente); % ângulo de subida arco tangente do gradiente
@@ -21,15 +21,11 @@ deltaT = 1; % especificado (100%)
 
 %------Cálculo do rho-------------
 
-R = 287; % J/Kg K SL
-Tzero = 288.15; % K (15˚C) SL
-rhozero = 1.225; %Kg/m^3 densidade no nivel do mar
-
-pzero = rhozero*R*Tzero; %pressao SL
+[rhozero, Tzero, pzero] = atmosferaISA(0); % utilização da função desenvolvida na primeira questão em SL
 
 Tlinha = Tzero-10:Tzero+30; % Vetor com temperaturas entre ISA-10 e ISA+30 SL
 
-rho = pzero./(R.*Tlinha); % rho para as temperaturas entre ISA-10 e ISA30 SL
+rho = pzero./(R.*Tlinha); % rho para as condiçoes de temperatura entre ISA-10 e ISA30 SL
 
 %--------Fim cálculo rho------------
 
@@ -61,7 +57,7 @@ end
 figure; hold on;
 plot(Tlinha-288.15, Resultados(:,4)', "LineWidth",1, "Color","r");
 grid on;
-ylabel("MTOW");
-xlabel("Temperatura ISA");
+ylabel("MTOW (kg)");
+xlabel("Temperatura ISA (K)");
 title("Peso Máximo de Decolagem");
-subtitle("");
+subtitle("Limitado pela condição mais restritica - OEI com gradiente de subida 2.4%");
